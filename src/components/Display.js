@@ -1,6 +1,6 @@
 import React , {useState} from 'react'
 import {Form , Button } from 'react-bootstrap'
-import {connect , useSelector , useDispatch} from 'react-redux'
+import {useSelector , useDispatch} from 'react-redux'
 import {addTodo} from './../redux/action/display.action.js'
 
 
@@ -11,13 +11,6 @@ function Display(props) {
     function track (param){
         setVal (param.target.value)
     }
-
-    function read (param){
-        alert("asd")
-    }
-
-
-
 
     const dispatch = useDispatch()
     const todo = useSelector((param) => param.todo)
@@ -49,23 +42,5 @@ function Display(props) {
     )
 }
 
-// const mapStateToProps = (props) => {
-//     console.log("dari mstp " ,props)
-//     return {
-//         todo: props
-//     }
-    
-// }
-
-// const  mapDispatchToProps = (dispatch) => {
-
-//     return {
-//         addTodo : (val) => dispatch(addTodo(val)),
-//     }
-
-// }
-
-
-// export default connect(mapStateToProps , mapDispatchToProps) (Display);
 
 export default Display;

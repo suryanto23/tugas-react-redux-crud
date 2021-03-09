@@ -1,6 +1,6 @@
 import React from 'react'
-import {getDataDelete , getData} from './../redux/action/comment.action'
-import {useDispatch , useSelector} from 'react-redux'
+import {getDataDelete } from './../redux/action/comment.action'
+import {useDispatch } from 'react-redux'
 import {Button} from 'react-bootstrap'
 
 function ButtonDelete(props) {
@@ -16,7 +16,6 @@ function ButtonDelete(props) {
         if (n) dispatch(getDataDelete(props.id));
 
     }
-
 
     return (
         <div>

@@ -3,14 +3,6 @@ export const GET_DATA_REQUEST = "GET_DATA_REQUEST";
 export const GET_DATA_FAILED = "GET_DATA_FAILED";
 export const GET_DATA_SUCCESS = "GET_DATA_SUCCESS";
 
-
-let config = {
-    onUploadProgress : (progressEvent) => { 
-            let calculation = Math.floor((progressEvent.loaded*100) / progressEvent.total) 
-            console.log(calculation)
-        }
-}
-
 export const getDataRequest = () => {
 
     return{
@@ -41,11 +33,8 @@ export const getDataPost = (val) => {
     return function (dispatch) {
         dispatch(getDataRequest());
     
-        axios.post(`https://6023a8436bf3e6001766b514.mockapi.io/app-inventory` , {biodata : val} , config)
-        .then(result => { 
-            dispatch(getData())
-           console.log("eksperimen " ,result.data)
-         })
+        axios.post(`https://6023a8436bf3e6001766b514.mockapi.io/app-inventory` , {biodata : val})
+        .then(result => dispatch(getData()) )
         .catch(error => dispatch(getDataFailed(error)))
 
     }

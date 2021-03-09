@@ -1,8 +1,8 @@
 import React from 'react'
-import {Spinner , ProgressBar} from 'react-bootstrap'
+import {Spinner} from 'react-bootstrap'
 
 function SpinnerLoading() {
-    const progress = 65;
+
     return (
 
         <div>
@@ -11,12 +11,7 @@ function SpinnerLoading() {
             <span className="sr-only">Loading...</span>
         </Spinner>
 
-       
-
-        
-
-
-            
+    
         </div>
     )
 }

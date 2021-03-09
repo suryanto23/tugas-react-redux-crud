@@ -29,7 +29,6 @@ const CommentReducer = (state = startState , action) => {
         case GET_DATA_SUCCESS:
             console.log("Get Data Succsessfully")
 
-            console.log("data in reducers " ,action.result)
                 return{
                     ...state,
                     isLoading : false,

@@ -1,4 +1,4 @@
-import { StaticRouter } from 'react-router';
+
 import {ADD_TODO , BLANK} from './../action/display.action.js';
 
  const startState = {todo : [{id: 1, buah: "jeruk (starting state)"}] };

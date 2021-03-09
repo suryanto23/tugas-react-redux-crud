@@ -1,6 +1,6 @@
 import {useState} from 'react'
-import {getDataPost , getData} from './../redux/action/comment.action'
-import {useDispatch , useSelector} from 'react-redux'
+import {getDataPost } from './../redux/action/comment.action'
+import {useDispatch } from 'react-redux'
 import {Form , Button , Row , Col} from 'react-bootstrap';
 
 function FormInput () {
@@ -20,9 +20,7 @@ function FormInput () {
 
     return (
         <div>
-            
-            
-               
+    
                     <Form>
                         <Row className=" d-flex justify-content-center" >
                             <Col xs="6" className="p-0 m-0">
@@ -34,11 +32,6 @@ function FormInput () {
                         </Row>
                     </Form>
                 
-          
-
-            
-
-            
 
         </div>
     )
