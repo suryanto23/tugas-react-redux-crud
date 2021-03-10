@@ -15,6 +15,7 @@ function FormInput () {
 
     function read (){
         dispatch(getDataPost(val));
+        document.getElementById("s").value = ""
     };
 
 
@@ -24,7 +25,7 @@ function FormInput () {
                     <Form>
                         <Row className=" d-flex justify-content-center" >
                             <Col xs="6" className="p-0 m-0">
-                                 <Form.Control onChange={track} placeholder="Input new item here"/>
+                                 <Form.Control id="s" onChange={track} placeholder="Input new item here"/>
                             </Col>
                             <Col xs="1"  className="p-0 m-0">
                                 <Button onClick={read}>Submit</Button>
